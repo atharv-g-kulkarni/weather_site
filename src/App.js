@@ -1,6 +1,6 @@
 import axios from "axios";
 function App() {
-  return <h1>Hello</h1>;
+  return <h6>Welcome to weather app</h6>;
 }
 
 export default App;
