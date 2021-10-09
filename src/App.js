@@ -1,5 +1,5 @@
 function App() {
-  return <h6>Hello world</h6>;
+  return <h6>Welcome to weather app</h6>;
 }
 
 export default App;
