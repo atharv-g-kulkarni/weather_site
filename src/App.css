@@ -36,3 +36,60 @@
     transform: rotate(360deg);
   }
 }
+.app{
+  width: 1300px;
+  margin:auto;
+  border:2px solid black;
+  height: 653px;
+  background-image: url(https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.Todays_weather{
+  display: flex;
+  flex-wrap: wrap;
+  width:412px;
+  height:100px;
+  padding:40px;
+  position: fixed;
+  bottom:20px;
+}
+.city_datetime{
+  position: relative;
+  top:7px;
+  display: inline-block;
+  width: 184px;
+  height:60px;
+  padding: 0;
+}
+.city,.datetime{
+  color:white;
+  float:left;
+  display: block;
+  margin: 0px 6px;
+}
+.city{
+  font-size: 25px;
+  font-weight: 500;
+}
+.datetime{
+  font-weight: 100;
+}
+.temp{
+  float:left;
+  color: white;
+  font-size: 60px;
+  font-weight: 500;
+  margin:6px;
+}
+.weather{
+  display: inline;
+  width: 100px;
+  height: 50px;
+  color: white;
+  font-weight:300 ;
+}
+.weather img{
+  display: block;
+}
