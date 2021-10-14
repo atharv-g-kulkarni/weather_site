@@ -92,4 +92,66 @@
 }
 .weather img{
   display: block;
+  
+}
+.App{
+  float: right; 
+  margin-right: 10px;
+  height: 700px;
+  width: 400px; 
+  background-image: url("https://images.unsplash.com/photo-1552249271-2f257ec421e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* margin-right: 90px; */
+}
+table, th, td {
+  margin-top: 50px;
+  
+  overflow-x: auto;
+  border: 1px solid white;
+  width: 100%;
+  padding: 20px;
+  border-collapse: collapse;
+  color: white;
+ 
+
+}
+td:hover {background-color: rgba(0, 255, 255, 0.582);}
+th:hover {background-color: rgba(0, 255, 255, 0.582);}
+
+.page , .page2{
+  padding: 2px;
+  color: rgb(255, 251, 0);
+  font-size: 30px;
+  /* text-shadow: 1px; */
+  text-underline-position: below;
+}
+
+.input {
+  margin-top: 10px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.582);
+  color: white;
+}
+input{
+  background-color: rgba(0, 0, 0, 0.438);
+  color: white; 
+  padding: 10px; 
+  border-radius: 20px;
+  width: 100%;
+
+}
+.btn{
+  margin-top: 10px;
+  padding: 10px;
+  width: 120px;
+  background-color:cyan;
+  color: black;
+  font-weight: bold;
+  border: #61dafb;
+  border-radius: 30px;
+}
+button:hover{
+  background-color: rgb(119, 243, 119);
 }

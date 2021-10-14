@@ -1,5 +1,5 @@
 import './App.css';
-import axios from "axios";
+import  "axios";
 
 function App() {
   return (
@@ -15,7 +15,43 @@ function App() {
           <span>Cloudy</span>
         </div>
       </div>
+      <div class="App">
+        <div>
+
+          <div class="input">
+          <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search Here" aria-label="Search"/>
+                    <button class="btn" type="submit">Search</button>
+                </form>
+          
+  
+            
+          </div>
+        <hr></hr> 
+        <div class="page">Todays_weather</div>
+        <table>
+          <tr>
+            <th>Clouds</th>
+            <td>50%</td>
+          </tr>
+          <tr>
+            <th>Density</th>
+            <td>5.3Kg/m<sup>3</sup></td>
+          </tr>
+          <tr>
+            <th>WindSpeed</th>
+            <td>20mph</td>
+          </tr>
+        </table> 
+        <hr></hr> 
+        
+          
+
+        </div>
+      </div>
     </div>
+
+
   );
 }
 
