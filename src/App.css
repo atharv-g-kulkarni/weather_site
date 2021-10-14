@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
@@ -36,24 +39,24 @@
     transform: rotate(360deg);
   }
 }
-.app{
-  width: 1300px;
-  margin:auto;
-  border:2px solid black;
-  height: 653px;
+body{
   background-image: url(https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
   overflow: hidden;
 }
 .Todays_weather{
+  margin-left: 10vh;
+  border:2px solid black;
+  width:500px;
   display: flex;
   flex-wrap: wrap;
-  width:412px;
-  height:100px;
   padding:40px;
-  position: fixed;
-  bottom:20px;
+  position:relative;
+  top:70vh;
+  background-color: rgb(24,24,27,0.7);
+  border-radius: 30px;
 }
 .city_datetime{
   position: relative;
