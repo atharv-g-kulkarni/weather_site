@@ -40,7 +40,8 @@
   }
 }
 body{
-  background-image: url(https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  /* background-image: url(https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); */
+  background-image: url(https://images.unsplash.com/photo-1561583534-09e822ba83ba?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHdlYXRoZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -48,14 +49,18 @@ body{
 }
 .Todays_weather{
   margin-left: 10vh;
-  border:2px solid black;
+  /* border:2px solid black; */
   width:500px;
   display: flex;
   flex-wrap: wrap;
   padding:40px;
   position:relative;
   top:70vh;
-  background-color: rgb(24,24,27,0.7);
+  box-shadow: 20px 20px 50px rgba(0,0, 0, 0.5);
+  background: rgba(46, 44, 44, 0.1);
+  border-top: 1px solid white;
+   border-left: 2px solid rgba(238, 221, 221, 0.637);
+  backdrop-filter: blur(5px);
   border-radius: 30px;
 }
 .city_datetime{
@@ -104,13 +109,17 @@ body{
   position:fixed ;
   right: 0 ;
   top: 0 ;
-  
+  overflow-x: scroll;
   height: 100vh;
   width: 400px; 
   background-image: url("https://images.unsplash.com/photo-1552249271-2f257ec421e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80");
   background-repeat: no-repeat;
   background-size: cover;
-  background-filter : blur(5px) ;
+  box-shadow: 20px 20px 50px rgba(0,0, 0, 0.5);
+  background: rgba(255,255,255,0.1);
+  border-top: 1px solid white;
+   border-left: 2px solid rgba(238, 221, 221, 0.637);
+  backdrop-filter: blur(5px);
   
   /* margin-right: 90px; */
 }
@@ -141,7 +150,9 @@ th:hover {background-color: rgba(0, 255, 255, 0.582);}
 .input {
   margin-top: 10px;
   padding: 30px;
-  background-color: rgba(0, 0, 0, 0.582);
+  /* box-shadow: 20px 20px 50px rgba(0,0, 0, 0.5);
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px); */
   color: white;
 }
 input{
@@ -164,6 +175,7 @@ input{
 }
 button:hover{
   background-color: rgb(119, 243, 119);
+  color:#282c34;
 }
 
 .weatherApp{
@@ -171,15 +183,18 @@ button:hover{
 
 }
 .cities{
-  display: block;
-  width : 268px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* width : 268px ; */
   margin: auto;
-  padding: 50px;
-  
-
+  padding: 10px;
 }
-#butn{
-  width : 400 px ;
+.cities div{
+  width:300px;
+}
+/* #butn1,#butn2,#butn3,#butn4{
+  width : 200 px ;
   display: block;
   margin: 10px;
   background-color: rgba(245, 89, 141, 0.781);
@@ -187,6 +202,15 @@ button:hover{
   font-weight: bolder;
 
 }
-#butn:hover{
+#butn1:hover,#butn2:hover,#butn3:hover,#butn4:hover{
   background-color: lightblue;
+} */
+.butn{
+  display:block;
+  background-color:rgba(0, 0, 0, 0.1);
+  font-weight: 300;
+  color:aliceblue;
+  width:350px;
+  font-size: 20px;
+  margin:5px;
 }

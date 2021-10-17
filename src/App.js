@@ -33,7 +33,7 @@ function App() {
 
   </div>
   <hr></hr>
-  <div class="page">Todays_weather</div>
+  <div class="page">Todays weather</div>
   <table>
     <tr>
       <th>Clouds</th>
@@ -49,14 +49,19 @@ function App() {
     </tr>
   </table>
   <hr></hr>
-    
+  <div class="page">Cities</div>
+  {/* <div class = "cities">
+       <button  id="butn1">Button</button>  
+       <button  id="butn2">Button</button>
+       <button  id="butn3">Button</button>
+       <button  id="butn4">Button</button>
+  </div> */}
   <div class = "cities">
-  <button type="button" class="btn btn-light" id="butn">Pune</button>
-  <button type="button" class="btn btn-light" id="butn">Kolkata</button>
-  <button type="button" class="btn btn-light" id="butn">London</button>
-  <button type="button" class="btn btn-light" id ="butn">Paris</button>
+      <div><button class="butn">Pune</button></div>
+      <div><button class="butn">Kolkata</button></div>
+      <div><button class="butn">London</button></div>
+      <div><button class="butn">Paris</button></div>
   </div>
-
 </div>
 </div>
 </div>
