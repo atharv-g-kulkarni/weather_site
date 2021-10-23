@@ -50,7 +50,7 @@ body{
 .Todays_weather{
   margin-left: 10vh;
   /* border:2px solid black; */
-  width:500px;
+  width:550px;
   display: flex;
   flex-wrap: wrap;
   padding:40px;
@@ -87,7 +87,7 @@ body{
 .temp{
   float:left;
   color: white;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 500;
   margin:6px;
 }
