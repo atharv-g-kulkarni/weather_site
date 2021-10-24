@@ -12,6 +12,13 @@ function App() {
     event.preventDefault();
     const loc=event.target.elements.loc.value;
     const res=await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${loc}&units=metric&appid=${apikey}`);
+    function Time(city,offset){
+      let d= new Date();
+      let utc= d.getTime()+(d.getTimezoneOffset()*60000);
+      let nd= new Date(utc+(1000*offset));
+      console.log(utc)
+      return nd.toLocaleString();
+    }
     setWeather({
       descp: res.data.weather[0].description,
       temp:res.data.main.temp,
@@ -20,8 +27,105 @@ function App() {
       pressure:res.data.main.pressure,
       humidity:res.data.main.humidity,
       mintemp:res.data.main.temp_min,
-      maxtemp:res.data.main.temp_min,
+      maxtemp:res.data.main.temp_max,
       windspeed:res.data.wind.speed,
+      time:Time(loc,res.data.timezone),
+    });
+  };
+  const apiCallpune=async(event)=>{
+    event.preventDefault();
+    const loc="pune";
+    const res=await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${loc}&units=metric&appid=${apikey}`);
+    function Time(city,offset){
+      let d= new Date();
+      let utc= d.getTime()+(d.getTimezoneOffset()*60000);
+      let nd= new Date(utc+(1000*offset));
+      console.log(utc)
+      return nd.toLocaleString();
+    }
+    setWeather({
+      descp: res.data.weather[0].description,
+      temp:res.data.main.temp,
+      city:res.data.name,
+      icon:res.data.weather[0].icon,
+      pressure:res.data.main.pressure,
+      humidity:res.data.main.humidity,
+      mintemp:res.data.main.temp_min,
+      maxtemp:res.data.main.temp_max,
+      windspeed:res.data.wind.speed,
+      time:Time(loc,res.data.timezone),
+    });
+  };
+  const apiCallkolkata=async(event)=>{
+    event.preventDefault();
+    const loc="kolkata";
+    const res=await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${loc}&units=metric&appid=${apikey}`);
+    function Time(city,offset){
+      let d= new Date();
+      let utc= d.getTime()+(d.getTimezoneOffset()*60000);
+      let nd= new Date(utc+(1000*offset));
+      console.log(utc)
+      return nd.toLocaleString();
+    }
+    setWeather({
+      descp: res.data.weather[0].description,
+      temp:res.data.main.temp,
+      city:res.data.name,
+      icon:res.data.weather[0].icon,
+      pressure:res.data.main.pressure,
+      humidity:res.data.main.humidity,
+      mintemp:res.data.main.temp_min,
+      maxtemp:res.data.main.temp_max,
+      windspeed:res.data.wind.speed,
+      time:Time(loc,res.data.timezone),
+    });
+  };
+  const apiCalllondon=async(event)=>{
+    event.preventDefault();
+    const loc="london";
+    const res=await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${loc}&units=metric&appid=${apikey}`);
+    function Time(city,offset){
+      let d= new Date();
+      let utc= d.getTime()+(d.getTimezoneOffset()*60000);
+      let nd= new Date(utc+(1000*offset));
+      console.log(utc)
+      return nd.toLocaleString();
+    }
+    setWeather({
+      descp: res.data.weather[0].description,
+      temp:res.data.main.temp,
+      city:res.data.name,
+      icon:res.data.weather[0].icon,
+      pressure:res.data.main.pressure,
+      humidity:res.data.main.humidity,
+      mintemp:res.data.main.temp_min,
+      maxtemp:res.data.main.temp_max,
+      windspeed:res.data.wind.speed,
+      time:Time(loc,res.data.timezone),
+    });
+  };
+  const apiCallparis=async(event)=>{
+    event.preventDefault();
+    const loc="paris";
+    const res=await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${loc}&units=metric&appid=${apikey}`);
+    function Time(city,offset){
+      let d= new Date();
+      let utc= d.getTime()+(d.getTimezoneOffset()*60000);
+      let nd= new Date(utc+(1000*offset));
+      console.log(utc)
+      return nd.toLocaleString();
+    }
+    setWeather({
+      descp: res.data.weather[0].description,
+      temp:res.data.main.temp,
+      city:res.data.name,
+      icon:res.data.weather[0].icon,
+      pressure:res.data.main.pressure,
+      humidity:res.data.main.humidity,
+      mintemp:res.data.main.temp_min,
+      maxtemp:res.data.main.temp_max,
+      windspeed:res.data.wind.speed,
+      time:Time(loc,res.data.timezone),
     });
   };
   // let k=weather.temp;
@@ -32,7 +136,7 @@ function App() {
       <div className="temp">{weather.temp} &deg;</div>
       <div className="city_datetime">
         <span className="city">{weather.city}</span>
-        <span className="datetime">06:09-Monday 9 sep'19</span>
+        <span className="datetime">{weather.time}</span>
       </div>
       <div className="weather">
         <img src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt="weather icon" className="w-icon" height="50px" width="50px"></img>
@@ -88,10 +192,10 @@ function App() {
        <button  id="butn4">Button</button>
   </div> */}
   <div className = "cities">
-      <div><button className="butn">Pune</button></div>
-      <div><button className="butn">Kolkata</button></div>
-      <div><button className="butn">London</button></div>
-      <div><button className="butn">Paris</button></div>
+      <div><button className="butn" onClick={apiCallpune}>Pune</button></div>
+      <div><button className="butn" onClick={apiCallkolkata}>Kolkata</button></div>
+      <div><button className="butn" onClick={apiCalllondon}>London</button></div>
+      <div><button className="butn" onClick={apiCallparis}>Paris</button></div>
   </div>
 </div>
 </div>
